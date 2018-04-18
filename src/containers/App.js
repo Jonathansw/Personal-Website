@@ -31,6 +31,7 @@ class App extends Component {
     scroller.scrollTo(element, {
       duration: 800,
       delay: 0,
+      offset: -50,
       smooth: 'easeInOutQuart'
     })
   }
@@ -40,42 +41,43 @@ class App extends Component {
 
   handleScroll(event) {
     var offSet = event.path[1].window.pageYOffset;
-    var addClass = '';
-    var rect = ReactDOM.findDOMNode(this.refs.navbar).getBoundingClientRect();
-    console.log(rect.top);
-    if (offSet >= 50){
-      addClass = 'sticky';
+    var setClass = null;
+    var navOffSet = ReactDOM.findDOMNode(this.refs.navbar).getBoundingClientRect().top;
+    if (offSet >= navOffSet + 415){
+      setClass = 'sticky';
     } else {
-      addClass = '';
+      setClass = null;
     }
     this.setState({
-      activeClass: 'test'
+      activeClass: setClass
     });
   }
 
   render() {
     return (
       <div className="wrapper">
-        <Navbar className = {`nav-top`} ref = "navbar">
-          <Nav>
-            <NavItem onClick={() => this.scrollTo('about')}>
-              About Me
-            </NavItem>
-            <NavItem onClick={() => this.scrollTo('exp')}>
-              Experience
-            </NavItem>
-            <NavItem onClick={() => this.scrollTo('proj')}>
-              Projects
-            </NavItem>
-            <NavItem onClick={() => this.scrollTo('contact')}>
-              Contact Me
-            </NavItem>
-          </Nav>
-        </Navbar>
         {/* Intro Section */}
+        <section className="head">
         <Element name="intro" className="container intro">
           <Intro/>
         </Element>
+        <Navbar className = {`nav-top ${this.state.activeClass}`} ref = "navbar">
+        <Nav>
+          <NavItem onClick={() => this.scrollTo('about')}>
+            About Me
+          </NavItem>
+          <NavItem onClick={() => this.scrollTo('exp')}>
+            Experience
+          </NavItem>
+          <NavItem onClick={() => this.scrollTo('proj')}>
+            Projects
+          </NavItem>
+          <NavItem onClick={() => this.scrollTo('contact')}>
+            Contact Me
+          </NavItem>
+        </Nav>
+      </Navbar>
+        </section>
         <Element name="about" className="container about">
           {/* Experience */}
           <About/>
