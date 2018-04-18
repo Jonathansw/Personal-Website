@@ -4,8 +4,8 @@ import './Experience.css';
 class Experience extends Component {
   render() {
     return (
-      <div className="text-center" id="main-cont">
-        <h1>Experience</h1>
+      <div id="main-cont">
+        <h1 className="text-center">Experience</h1>
         <hr/>
         <div className="container">
           <h2>Thomson Reuters</h2>

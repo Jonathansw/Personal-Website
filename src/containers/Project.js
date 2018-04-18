@@ -4,8 +4,8 @@ import './Project.css';
 class Project extends Component {
   render() {
     return (
-      <div className="text-center" id="main-cont">
-        <h1>Projects</h1>
+      <div id="main-cont">
+        <h1 className="text-center">Projects</h1>
         <hr/>
       </div>
     )

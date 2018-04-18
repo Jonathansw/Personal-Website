@@ -23,6 +23,9 @@
     float:none;
 }
 
+nav {
+  z-index: 9;
+}
 
 .nav-top {
   background-color: transparent;
@@ -46,10 +49,6 @@
   height: 50px;
   background-color: #244669;
   border-radius: 0 !important;
-}
-
-.sticky + .intro {
-  padding-top: 60px;
 }
 
 .intro {
