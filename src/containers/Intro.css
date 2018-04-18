@@ -1,0 +1,19 @@
+#me {
+  height: 200px;
+  width: 200px;
+  margin-top: 50px;
+}
+
+#main-desc {
+  color: whitesmoke;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#main-desc h1 {
+  font-size: 75px;
+}
+
+#main-desc p {
+  font-size: 20px;
+}
