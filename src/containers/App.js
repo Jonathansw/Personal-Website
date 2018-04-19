@@ -6,7 +6,6 @@ import ReactDOM from 'react-dom';
 import Intro from './Intro';
 import Experience from './Experience';
 import Project from './Project';
-import Contact from './Contact';
 import About from './About';
 
 import './App.css'
@@ -32,6 +31,7 @@ class App extends Component {
       duration: 800,
       delay: 0,
       offset: -50,
+      activeClass: true,
       smooth: 'easeInOutQuart'
     })
   }
@@ -72,9 +72,6 @@ class App extends Component {
           <NavItem onClick={() => this.scrollTo('proj')}>
             Projects
           </NavItem>
-          <NavItem onClick={() => this.scrollTo('contact')}>
-            Contact Me
-          </NavItem>
         </Nav>
       </Navbar>
         </section>
@@ -90,10 +87,14 @@ class App extends Component {
           {/* Projects */}
           <Project/>
         </Element>
-        <Element name="contact" className="container contact">
-          {/* Contact Me */}
-          <Contact/>
-        </Element>
+        <footer className="footer">
+          <div className="footer-links">
+            <a>Email</a>
+            <a>Github</a>
+            <a>LinkedIn</a>
+            <a>Instagram</a>
+          </div>
+        </footer>
       </div>
     )
   }

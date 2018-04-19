@@ -5,7 +5,7 @@ class Experience extends Component {
   render() {
     return (
       <div id="main-cont">
-        <h1 className="text-center">Experience</h1>
+        <h1 className="text-center">Work Experience</h1>
         <hr/>
         <div className="container">
           <h2>Thomson Reuters</h2>
