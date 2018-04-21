@@ -102,3 +102,7 @@ nav {
 a:hover {
   color: whitesmoke;
 }
+
+.footer-links .footer-text {
+  letter-spacing: 1px;
+}

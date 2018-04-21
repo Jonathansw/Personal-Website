@@ -1,5 +1,6 @@
 import * as Scroll from 'react-scroll';
 import {Navbar, Nav, NavItem} from 'react-bootstrap';
+import {BrowserView, isBrowser} from 'react-device-detect';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
@@ -61,19 +62,21 @@ class App extends Component {
         <Element name="intro" className="container intro">
           <Intro/>
         </Element>
-        <Navbar className = {`nav-top ${this.state.activeClass}`} ref = "navbar">
-        <Nav>
-          <NavItem onClick={() => this.scrollTo('about')}>
-            About Me
-          </NavItem>
-          <NavItem onClick={() => this.scrollTo('exp')}>
-            Experience
-          </NavItem>
-          <NavItem onClick={() => this.scrollTo('proj')}>
-            Projects
-          </NavItem>
-        </Nav>
-      </Navbar>
+        <BrowserView device={isBrowser}>
+          <Navbar className={`nav-top ${this.state.activeClass}`} ref="navbar">
+          <Nav>
+            <NavItem onClick={() => this.scrollTo('about')}>
+              About Me
+            </NavItem>
+            <NavItem onClick={() => this.scrollTo('exp')}>
+              Experience
+            </NavItem>
+            <NavItem onClick={() => this.scrollTo('proj')}>
+              Projects
+            </NavItem>
+          </Nav>
+          </Navbar>
+        </BrowserView>
         </section>
         <Element name="about" className="container about">
           {/* Experience */}
@@ -89,10 +92,18 @@ class App extends Component {
         </Element>
         <footer className="footer">
           <div className="footer-links">
-            <a>Email</a>
-            <a>Github</a>
-            <a>LinkedIn</a>
-            <a>Instagram</a>
+            <a href="mailto:jonathansw@outlook.com" target="_blank" rel="noopener noreferrer">
+              <span class="footer-text">Email</span>
+            </a>
+            <a href="https://github.com/Jonathansw/" target="_blank" rel="noopener noreferrer">
+              <span class="footer-text">Github</span>
+            </a>
+            <a href="https://www.linkedin.com/in/jonathansw/" target="_blank" rel="noopener noreferrer">
+              <span class="footer-text">LinkedIn</span>
+            </a>
+            <a href="https://www.instagram.com/jxhnwxng/" target="_blank" rel="noopener noreferrer">
+              <span class="footer-text">Instagram</span>
+            </a>
           </div>
         </footer>
       </div>

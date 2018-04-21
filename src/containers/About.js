@@ -29,26 +29,24 @@ class About extends Component {
           </Col>
           <Col md={4}>
             <h3>My current tech stack</h3>
-            <p>
-              <ListGroup>
-                <ListGroupItem>
-                  <h4>Languages</h4>
-                  <ul>
-                    <li>Java</li>
-                    <li>JavaScript</li>
-                    <li>Python</li>
-                  </ul>
-                </ListGroupItem>
-                <ListGroupItem>
-                  <h4>Frameworks</h4>
-                  <ul>
-                    <li>NodeJS</li>
-                    <li>VueJS</li>
-                    <li>ReactJS</li>
-                  </ul>
-                </ListGroupItem>
-              </ListGroup>
-            </p>
+            <ListGroup>
+              <ListGroupItem>
+                <h4>Languages</h4>
+                <ul>
+                  <li>Java</li>
+                  <li>JavaScript</li>
+                  <li>Python</li>
+                </ul>
+              </ListGroupItem>
+              <ListGroupItem>
+                <h4>Frameworks</h4>
+                <ul>
+                  <li>NodeJS</li>
+                  <li>VueJS</li>
+                  <li>ReactJS</li>
+                </ul>
+              </ListGroupItem>
+            </ListGroup>
           </Col>
         </Grid>
       </div>
