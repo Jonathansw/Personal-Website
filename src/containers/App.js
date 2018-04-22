@@ -1,6 +1,7 @@
 import * as Scroll from 'react-scroll';
 import {Navbar, Nav, NavItem} from 'react-bootstrap';
-import {BrowserView, isBrowser} from 'react-device-detect';
+import {BrowserView, isBrowser, MobileView, isMobile} from 'react-device-detect';
+import FontAwesome from 'react-fontawesome';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
@@ -13,6 +14,10 @@ import './App.css'
 
 let Element = Scroll.Element;
 let scroller = Scroll.scroller;
+
+const styleing = {
+  'margin': '0 10px'
+}
 
 class App extends Component {
   constructor(props) {
@@ -44,7 +49,7 @@ class App extends Component {
     var offSet = event.path[1].window.pageYOffset;
     var setClass = null;
     var navOffSet = ReactDOM.findDOMNode(this.refs.navbar).getBoundingClientRect().top;
-    if (offSet >= navOffSet + 415){
+    if (offSet >= navOffSet + 750){
       setClass = 'sticky';
     } else {
       setClass = null;
@@ -92,18 +97,34 @@ class App extends Component {
         </Element>
         <footer className="footer">
           <div className="footer-links">
-            <a href="mailto:jonathansw@outlook.com" target="_blank" rel="noopener noreferrer">
-              <span class="footer-text">Email</span>
-            </a>
-            <a href="https://github.com/Jonathansw/" target="_blank" rel="noopener noreferrer">
-              <span class="footer-text">Github</span>
-            </a>
-            <a href="https://www.linkedin.com/in/jonathansw/" target="_blank" rel="noopener noreferrer">
-              <span class="footer-text">LinkedIn</span>
-            </a>
-            <a href="https://www.instagram.com/jxhnwxng/" target="_blank" rel="noopener noreferrer">
-              <span class="footer-text">Instagram</span>
-            </a>
+            <MobileView device={isMobile}>
+              <a href="mailto:jonathansw@outlook.com" target="_blank" rel="noopener noreferrer" style={styleing}>
+                <FontAwesome name="envelope" size="2x" style={{'color': 'smokewhite'}}/>
+              </a>
+              <a href="https://github.com/Jonathansw/" target="_blank" rel="noopener noreferrer" style={styleing}>
+                <FontAwesome name="github" size="2x" style={{'color': 'smokewhite'}}/>
+              </a>
+              <a href="https://www.linkedin.com/in/jonathansw/" target="_blank" rel="noopener noreferrer" style={styleing}>
+                <FontAwesome name="linkedin" size="2x" style={{'color': 'smokewhite'}}/>
+              </a>
+              <a href="https://www.instagram.com/jxhnwxng/" target="_blank" rel="noopener noreferrer" style={styleing}>
+                <FontAwesome name="instagram" size="2x" style={{'color': 'smokewhite'}}/>
+              </a>
+            </MobileView>
+            <BrowserView device={isBrowser}>
+              <a href="mailto:jonathansw@outlook.com" target="_blank" rel="noopener noreferrer">
+                <span className="footer-text">Email</span>
+              </a>
+              <a href="https://github.com/Jonathansw/" target="_blank" rel="noopener noreferrer">
+                <span className="footer-text">Github</span>
+              </a>
+              <a href="https://www.linkedin.com/in/jonathansw/" target="_blank" rel="noopener noreferrer">
+                <span className="footer-text">LinkedIn</span>
+              </a>
+              <a href="https://www.instagram.com/jxhnwxng/" target="_blank" rel="noopener noreferrer">
+                <span className="footer-text">Instagram</span>
+              </a>
+            </BrowserView>
           </div>
         </footer>
       </div>
