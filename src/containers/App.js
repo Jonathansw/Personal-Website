@@ -9,6 +9,7 @@ import Intro from './Intro';
 import Experience from './Experience';
 import Project from './Project';
 import About from './About';
+import Skill from './Skill';
 
 import './App.css'
 
@@ -31,7 +32,9 @@ class App extends Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
+    this.navOffSet = ReactDOM.findDOMNode(this.refs.navbar).offsetTop;
   }
+
   scrollTo(element) {
     scroller.scrollTo(element, {
       duration: 800,
@@ -48,8 +51,7 @@ class App extends Component {
   handleScroll(event) {
     var offSet = event.path[1].window.pageYOffset;
     var setClass = null;
-    var navOffSet = ReactDOM.findDOMNode(this.refs.navbar).getBoundingClientRect().top;
-    if (offSet >= navOffSet + 750){
+    if (offSet >= this.navOffSet){
       setClass = 'sticky';
     } else {
       setClass = null;
@@ -79,6 +81,9 @@ class App extends Component {
             <NavItem onClick={() => this.scrollTo('proj')}>
               Projects
             </NavItem>
+            <NavItem onClick={() => this.scrollTo('skill')}>
+              Skills
+            </NavItem>
           </Nav>
           </Navbar>
         </BrowserView>
@@ -86,6 +91,9 @@ class App extends Component {
         <Element name="about" className="container about">
           {/* Experience */}
           <About/>
+        </Element>
+        <Element name="skills" className="container skill">
+          <Skill/>
         </Element>
         <Element name="exp" className="container exp">
           {/* Experience */}

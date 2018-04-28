@@ -2,6 +2,14 @@ hr {
   width: 250px;
 }
 
+.job {
+  padding: 20px 0 20px 0;
+}
+
+.job-desc {
+  font-size: 20px;
+}
+
 .row-cont {
   padding: 20px 0;
 }
@@ -9,3 +17,4 @@ hr {
 .col-md-8 {
   padding: 20px;
 }
+

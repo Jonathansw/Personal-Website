@@ -24,7 +24,7 @@ class About extends Component {
             </p>
             <p>
               When I am not coding or learning new technologies, I enjoy spending my time watching/playing my favorite eSport.  
-              Outside of using my computer I really enjoy reading and hanging out with my cats.
+              Outside of using my computer I really enjoy reading foreign novels and cooking.
             </p>
           </Col>
           <Col md={4}>

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Grid, Col, Row} from 'react-bootstrap';
+import {Grid, Col, Row, Label} from 'react-bootstrap';
 
 import './Experience.css';
 
@@ -9,6 +9,18 @@ class Experience extends Component {
       <div id="main-cont">
         <h1 className="text-center">Work Experience</h1>
         <hr/>
+        <div className="container text-center">
+          <div className="job">
+            <p className="job-desc">Thomson Reuters • Junior Software Engineer • Phildelphia, PA • March 2015 - December 2015</p>
+          </div>
+          <div className="job">
+            <p className="job-desc">PJM Interconnection • Platforms Operations Co-op • Phildelphia, PA • March 2014 - September 2014</p>
+          </div>
+          <div className="job">
+            <p className="job-desc">FISDU(Drexel University) • Webmaster • Phildelphia, PA • May 2013 - May 2014</p>
+          </div>
+        </div>
+    {/*
         <Grid>
           <Row className="row-cont">
             <Col md={4}>
@@ -44,6 +56,7 @@ class Experience extends Component {
             </Col>
           </Row>
         </Grid>
+        */}
       </div>
     )
   }

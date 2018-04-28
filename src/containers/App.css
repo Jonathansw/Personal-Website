@@ -54,6 +54,9 @@ nav {
   background-color: #244669;
   border-radius: 0 !important;
 }
+.sticky + .about {
+  padding-top: 60px;
+}
 
 .intro {
   width: 100%;
@@ -70,6 +73,13 @@ nav {
   width: 100%;
   padding: 75px 0;
 }
+
+.skill {
+  background-color: #ebf0f1;
+  width: 100%;
+  padding: 75px 0; 
+}
+
 .exp {
   background-color: #ebf0f1;
   width: 100%;
