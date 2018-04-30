@@ -19,15 +19,15 @@ class About extends Component {
           <Col md={8} className="self-desc">
             <h3>Hello there!</h3>
             <p>
-              I'm an inspiring software developer currently located in the Bay Area.  
-              I received my bachelor degree in computer science from Drexel University in May 2017.  
+              I'm an aspiring software developer currently located in the Bay Area.  
+              I received my bachelor in computer science from Drexel University in May 2017.  
               My current aspirations are to be able to create lasting impactful software.
             </p>
             <p>
               When I am not coding or learning new technologies, I enjoy spending my time watching/playing my favorite eSport.  
               Outside of using my computer I really enjoy reading foreign novels and cooking.
             </p>
-            <p>I am always open to meet new people and learn about your experiences.</p>
+            <p>I am always open to meet new people and learn about different experiences in the field.</p>
             <p>
               Get in touch with me{' '}
               <FontAwesome name="hand-o-right"/> {' '}
