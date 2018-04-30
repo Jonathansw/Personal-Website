@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {} from 'react-bootstrap';
 import FontAwesome from 'react-fontawesome';
 
 import Resume from '../documents/Resume.pdf';
