@@ -32,7 +32,11 @@ class App extends Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
-    this.navOffSet = ReactDOM.findDOMNode(this.refs.navbar).offsetTop;
+    if(isBrowser) {
+      this.navOffSet = ReactDOM.findDOMNode(this.refs.navbar).offsetTop;
+    } else {
+      this.navOffSet = 0;
+    }
   }
 
   scrollTo(element) {
