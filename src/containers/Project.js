@@ -23,7 +23,7 @@ class Project extends Component {
               </div>
             </Col>
             <Col md={8}>
-              <div>
+              <div className="projects">
                 <ul>
                   <li>Worked with four other developers to create a smart home system using Raspberry Pies and MEAN stack</li>
                   <li>Spearheaded all technical writing, including system, design, and testing documents</li>
@@ -44,7 +44,7 @@ class Project extends Component {
               </div>
             </Col>
             <Col md={8}>
-              <div>
+              <div className="projects">
                 <ul>
                   <li>Developed with others a web application with MeteorJS that looked up prebuild decks and totaled real-time deck prices</li>
                   <li>Used Kimono Labs to scrap deck data into Firebase, and used TCGPlayer’s Api to check card prices</li>

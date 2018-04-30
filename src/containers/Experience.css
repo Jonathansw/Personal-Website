@@ -10,6 +10,12 @@ hr {
   font-size: 20px;
 }
 
+.resume {
+  margin-top: 25px;
+  text-align: right;
+  font-size: 20px;
+}
+
 .row-cont {
   padding: 20px 0;
 }

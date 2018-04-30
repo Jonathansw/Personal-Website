@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Grid, Col, Image, ListGroup, ListGroupItem} from 'react-bootstrap'
+import {Grid, Col, Image} from 'react-bootstrap'
+import FontAwesome from 'react-fontawesome';
 
 import Me from '../images/me.jpg';
 
@@ -15,7 +16,7 @@ class About extends Component {
           <Col md={4}>
             <Image src={Me} thumbnail />
           </Col>
-          <Col md={4}>
+          <Col md={8} className="self-desc">
             <h3>Hello there!</h3>
             <p>
               I'm an inspiring software developer currently located in the Bay Area.  
@@ -26,27 +27,12 @@ class About extends Component {
               When I am not coding or learning new technologies, I enjoy spending my time watching/playing my favorite eSport.  
               Outside of using my computer I really enjoy reading foreign novels and cooking.
             </p>
-          </Col>
-          <Col md={4}>
-            <h3>My current tech stack</h3>
-            <ListGroup>
-              <ListGroupItem>
-                <h4>Languages</h4>
-                <ul>
-                  <li>Java</li>
-                  <li>JavaScript</li>
-                  <li>Python</li>
-                </ul>
-              </ListGroupItem>
-              <ListGroupItem>
-                <h4>Frameworks</h4>
-                <ul>
-                  <li>NodeJS</li>
-                  <li>VueJS</li>
-                  <li>ReactJS</li>
-                </ul>
-              </ListGroupItem>
-            </ListGroup>
+            <p>I am always open to meet new people and learn about your experiences.</p>
+            <p>
+              Get in touch with me{' '}
+              <FontAwesome name="hand-o-right"/> {' '}
+              <a href="mailto:jonathansw@outlook.com" target="_blank" rel="noopener noreferrer">jonathansw@outlook.com</a>
+            </p>
           </Col>
         </Grid>
       </div>

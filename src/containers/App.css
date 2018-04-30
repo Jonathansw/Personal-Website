@@ -31,6 +31,10 @@ nav {
   z-index: 9;
 }
 
+p {
+  font-size: 15px;
+}
+
 .nav-top {
   background-color: transparent;
   background: transparent;
@@ -75,7 +79,7 @@ nav {
 }
 
 .skill {
-  background-color: #ebf0f1;
+  background-color: #F5F6F9 ;
   width: 100%;
   padding: 75px 0; 
 }

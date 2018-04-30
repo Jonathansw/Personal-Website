@@ -75,14 +75,14 @@ class App extends Component {
             <NavItem onClick={() => this.scrollTo('about')}>
               About Me
             </NavItem>
+            <NavItem onClick={() => this.scrollTo('skill')}>
+              Skills
+            </NavItem>
             <NavItem onClick={() => this.scrollTo('exp')}>
               Experience
             </NavItem>
             <NavItem onClick={() => this.scrollTo('proj')}>
               Projects
-            </NavItem>
-            <NavItem onClick={() => this.scrollTo('skill')}>
-              Skills
             </NavItem>
           </Nav>
           </Navbar>

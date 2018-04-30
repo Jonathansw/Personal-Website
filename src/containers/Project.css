@@ -3,6 +3,10 @@ hr {
   border-top-color: #999;
 }
 
+.projects ul {
+  font-size: 15px;
+}
+
 div.col-md-4 h2 a {
   text-decoration: none;
 }
