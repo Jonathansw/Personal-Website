@@ -1,5 +1,8 @@
 .wrapper {
   height: 100%;
+  -webkit-animation: fadein 1500ms; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1500ms; /* Firefox < 16 */
+       animation: fadein 1500ms;
 }
 
 .nav.navbar-nav li a {
@@ -119,4 +122,21 @@ a:hover {
 
 .footer-links .footer-text {
   letter-spacing: 1px;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }

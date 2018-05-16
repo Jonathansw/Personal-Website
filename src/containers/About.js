@@ -21,7 +21,7 @@ class About extends Component {
             <p>
               I'm an aspiring software developer currently located in the Bay Area.  
               I received my bachelor in computer science from Drexel University in May 2017.  
-              My current aspirations are to be able to create lasting impactful software.
+              My current goals are to be able to create lasting and impactful software.
             </p>
             <p>
               When I am not coding or learning new technologies, I enjoy spending my time watching/playing my favorite eSport.  

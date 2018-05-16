@@ -29,6 +29,10 @@ class App extends Component {
       activeClass: false
     };
   }
+  // fake authentication Promise
+  authenticate(){
+    return new Promise(resolve => setTimeout(resolve, 2000))
+  }
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
@@ -37,6 +41,18 @@ class App extends Component {
     } else {
       this.navOffSet = 0;
     }
+
+    this.authenticate().then(() => {
+      const ele = document.getElementById('loading-screen');   
+      if(ele){
+        // fade out
+        ele.classList.add('available')
+        setTimeout(() => {
+          // remove from DOM
+          ele.outerHTML = ''
+        }, 2000)
+      }
+    });
   }
 
   scrollTo(element) {
