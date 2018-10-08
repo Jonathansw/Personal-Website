@@ -52,6 +52,26 @@ class Project extends Component {
               </div>
             </Col>
           </Row>
+          <Row className="row-cont">
+          <Col md={4}>
+            <h2><a href="https://github.com/Jonathansw/Discord-Bot" target="_blank" rel="noopener noreferrer">Personal Discord Bot</a></h2>
+            <div>
+              <Label bsStyle="info">NodeJS</Label>{' '}
+              <Label bsStyle="info">Anilist Api (GraphQL)</Label>{' '}
+              <Label bsStyle="info">HLTV Api</Label>{' '}
+              <Label bsStyle="info">Heroku</Label>
+            </div>
+          </Col>
+          <Col md={8}>
+            <div className="projects">
+              <ul>
+                <li>Developed a Discord bot in NodeJS that displays information such as schedule to air anime, and Counter Strike matches</li>
+                <li>Used AniList’s GraphQL api and HLTV api to query for all of specific anime or live/upcoming Counter Strike that came out today when the bot is queried</li>
+                <li>Deployed the bot on Heroku allow the bot to be integrated to any Discord server</li>
+              </ul>
+            </div>
+          </Col>
+        </Row>
         </Grid>
       </div>
     )
